@@ -7,7 +7,7 @@ import (
 )
 
 type Example struct {
-	classdb.Extension[Example, Node2D.Instance] `gd:"Example"`
+	classdb.Extension[Example, Node2D.Instance] `gd:"NXRExample"`
 }
 
 func main() {
