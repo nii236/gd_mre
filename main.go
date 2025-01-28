@@ -1,17 +1,30 @@
 package main
 
 import (
+	"fmt"
+	"math"
+
 	"graphics.gd/classdb"
-	"graphics.gd/classdb/Node2D"
+	"graphics.gd/classdb/Sprite2D"
 	"graphics.gd/startup"
+	"graphics.gd/variant/Float"
 )
 
-type Example struct {
-	classdb.Extension[Example, Node2D.Instance] `gd:"NXRExample"`
+type RotateSprite struct {
+	classdb.Extension[RotateSprite, Sprite2D.Instance]
+	classdb.Tool
+}
+
+func (r *RotateSprite) Ready() {
+	fmt.Println("RotateSprite Ready")
+}
+func (r *RotateSprite) Process(delta Float.X) {
+	current := r.Super().AsNode2D().Rotation()
+	r.Super().AsNode2D().SetRotation(current + Float.X(math.Pi*delta))
 }
 
 func main() {
+	classdb.Register[RotateSprite]()
 	startup.Loader()
-	classdb.Register[Example]()
 	startup.Engine()
 }
