@@ -1,10 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmhmiv43fqo4c"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_youb6"]
+[ext_resource type="PackedScene" uid="uid://cqdn4p7a77mp8" path="res://player.tscn" id="1_a5pmr"]
 
 [node name="Node" type="Node"]
 
-[node name="RotateSprite" type="RotateSprite" parent="."]
-position = Vector2(93.25, 90.25)
-scale = Vector2(187.5, 181.5)
-texture = SubResource("PlaceholderTexture2D_youb6")
+[node name="MinimalExample" type="MinimalExample" parent="."]
+player = ExtResource("1_a5pmr")

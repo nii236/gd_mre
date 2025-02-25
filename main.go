@@ -2,29 +2,41 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"log/slog"
 
 	"graphics.gd/classdb"
-	"graphics.gd/classdb/Sprite2D"
+	"graphics.gd/classdb/CharacterBody2D"
+	"graphics.gd/classdb/Node"
+	"graphics.gd/classdb/PackedScene"
 	"graphics.gd/startup"
-	"graphics.gd/variant/Float"
 )
 
-type RotateSprite struct {
-	classdb.Extension[RotateSprite, Sprite2D.Instance]
-	classdb.Tool
+type MRE struct {
+	classdb.Extension[MRE, Node.Instance] `gd:"MinimalExample"`
+	Player                                PackedScene.Instance
 }
 
-func (r *RotateSprite) Ready() {
-	fmt.Println("RotateSprite Ready")
-}
-func (r *RotateSprite) Process(delta Float.X) {
-	current := r.Super().AsNode2D().Rotation()
-	r.Super().AsNode2D().SetRotation(current + Float.X(math.Pi*delta))
+func (m *MRE) AsNode() Node.Instance { return m.AsNode() }
+
+func (m *MRE) Ready() {
+	player := m.Player.Instantiate()
+
+	fmt.Println("Player:", player)
+	char, ok := classdb.As[CharacterBody2D.Instance](Node.Instance(player))
+	if !ok {
+		slog.Warn("could not get CharacterBody2D from player")
+		return
+	}
+	fmt.Println("char", char)
+	fmt.Println("char.AsNode()", char.AsNode())
+
+	// If you uncomment the following line, it will panic when running in the browser
+	fmt.Println("char.AsNode().Name()", char.AsNode().Name())
 }
 
 func main() {
-	classdb.Register[RotateSprite]()
-	startup.Loader()
-	startup.Engine()
+	classdb.Register[MRE]()
+	startup.LoadingScene()
+	slog.Info("main ready")
+	startup.Scene()
 }

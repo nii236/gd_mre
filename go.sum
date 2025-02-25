@@ -2,7 +2,7 @@ github.com/tetratelabs/wazero v1.8.2 h1:yIgLR/b2bN31bjxwXHD8a3d+BogigR952csSDdLY
 github.com/tetratelabs/wazero v1.8.2/go.mod h1:yAI0XTsMBhREkM/YDAK/zNou3GoiAce1P6+rp/wQhjs=
 golang.org/x/text v0.15.0 h1:h1V/4gjBv8v9cjcR6+AR5+/cIYK5N/WAgiv4xlsEtAk=
 golang.org/x/text v0.15.0/go.mod h1:18ZOQIKpY8NJVqYksKHtTdi31H5itFRjB5/qKTNYzSU=
-graphics.gd v0.0.0-20250126102957-8488e125f318 h1:atYH5r/pqPfcuDtkd0hUGom4qlBBZBb9hwB1YWnQxBE=
-graphics.gd v0.0.0-20250126102957-8488e125f318/go.mod h1:Ba6RRAbAUus6SNLWQW0bM1Aw0VWnEYusF/mtd56WmIs=
-runtime.link v0.0.0-20241203235822-266e6dd4f99d h1:HzPoM8kUlHbNziC53/jrA4x0Su2XGDLU0VAw/xs8goc=
-runtime.link v0.0.0-20241203235822-266e6dd4f99d/go.mod h1:bs9lT/R79BfIAGcCHrCWiEdDec5nUNSBBjDmAvAsasU=
+graphics.gd v0.0.0-20250218093300-7db9c1f06164 h1:hVqdXiND82Uz9eoigCZC4R/qM+OUPeN/eDpjovEO0LE=
+graphics.gd v0.0.0-20250218093300-7db9c1f06164/go.mod h1:jB0P4sCh+O8hgbA7gi+C33jraC/tqcByguT4VCbPB2U=
+runtime.link v0.0.0-20250131052539-992a5f0be9db h1:pmEAAhIKeeisn2bXh43ZSULNXsrveRC/iDxBLoc0RC8=
+runtime.link v0.0.0-20250131052539-992a5f0be9db/go.mod h1:bs9lT/R79BfIAGcCHrCWiEdDec5nUNSBBjDmAvAsasU=
