@@ -13,4 +13,4 @@ config_version=5
 config/name="gd_mre"
 run/main_scene="res://main.tscn"
 run/main_loop_type="GoMainLoop"
-config/features=PackedStringArray("4.3")
+config/features=PackedStringArray("4.4")

@@ -2,7 +2,7 @@ module gd_mre
 
 go 1.24.0
 
-require graphics.gd v0.0.0-20250218093300-7db9c1f06164
+require graphics.gd v0.0.0-20250305104756-525f282a3f28
 
 require (
 	github.com/tetratelabs/wazero v1.8.2 // indirect

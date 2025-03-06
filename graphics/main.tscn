@@ -1,8 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmhmiv43fqo4c"]
 
-[ext_resource type="PackedScene" uid="uid://cqdn4p7a77mp8" path="res://player.tscn" id="1_a5pmr"]
+[ext_resource type="PackedScene" uid="uid://c5321yd42yfnx" path="res://spawner.tscn" id="1_ig7tw"]
 
 [node name="Node" type="Node"]
 
-[node name="MinimalExample" type="MinimalExample" parent="."]
-player = ExtResource("1_a5pmr")
+[node name="Spawner" parent="." instance=ExtResource("1_ig7tw")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.01896)

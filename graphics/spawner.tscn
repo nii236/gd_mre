@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5321yd42yfnx"]
+
+[ext_resource type="PackedScene" uid="uid://qvfdhuny3yi8" path="res://bullet.tscn" id="1_yp5lu"]
+
+[node name="Spawner" type="MRESpawner"]
+bullet_scene = ExtResource("1_yp5lu")
+
+[node name="Cooldown" type="Timer" parent="."]
+one_shot = true
+autostart = true

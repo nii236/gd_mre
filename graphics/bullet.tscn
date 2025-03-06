@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://qvfdhuny3yi8"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_rtl8c"]
+
+[node name="Bullet" type="MREBullet"]
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_rtl8c")
+
+[node name="Ray" type="RayCast3D" parent="."]
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+autostart = true
